@@ -13,13 +13,22 @@
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
 
     <script>
-      const welp = React.createElement(
+      const customer = {
+        first_name: 'Bob',
+        last_name: 'Dylan',
+      };
+      const name = React.createElement(
         'h1',
         { id: 'recipe-0' },
-        'Krzysztof Paliga!'
+        'My name is ' + customer.first_name
+      );
+      const surname = React.createElement(
+        'h2',
+        { id: 'recipe-0' },
+        'My last name is ' + customer.last_name
       );
       const root = ReactDOM.createRoot(document.getElementById('root'));
-      root.render(welp);
+      root.render([name, surname]);
     </script>
   </body>
 </html>
